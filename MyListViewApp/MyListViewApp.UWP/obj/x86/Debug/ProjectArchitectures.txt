@@ -1,0 +1,2 @@
+D:\desenvolvimento\C#\MyListViewApp\MyListViewApp\MyListViewApp.UWP\MyListViewApp.UWP.csproj;x86
+D:\desenvolvimento\C#\MyListViewApp\MyListViewApp\MyListViewApp\MyListViewApp.csproj;neutral
