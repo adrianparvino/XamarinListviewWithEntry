@@ -2,29 +2,38 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyListViewApp.Views.MainPage"
+             xmlns:CustomRenderers="clr-namespace:MyListViewApp.CustomRenderers"
              Title="ListViewApp"
-             BackgroundColor="Olive">
+             BackgroundColor="White">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="toolbarEdit" Name="Edit" Order="Primary" Priority="0" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="beverageList" IsGroupingEnabled="True" GroupDisplayBinding="{Binding StoreName}" ItemsSource="{Binding beverageListViewItemCollection}" ItemTapped="beverageList_ItemTapped">
-                <ListView.GroupHeaderTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
-                                <Grid BackgroundColor="#EAEAEA">
-                                    <Label Text="{Binding StoreName}" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
-                                </Grid>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.GroupHeaderTemplate>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Entry Text="0" Keyboard="Numeric" WidthRequest="100" HorizontalTextAlignment="End"></Entry>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <ListView x:Name="beverageList" IsGroupingEnabled="True" GroupDisplayBinding="{Binding StoreName}" ItemsSource="{Binding beverageListViewItemCollection}" ItemTapped="beverageList_ItemTapped">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid BackgroundColor="#EAEAEA">
+                                        <Label Text="{Binding StoreName}" FontAttributes="Bold" FontSize="15" TextColor="Black"/>
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
                                 <StackLayout BackgroundColor="{Binding TappedItemBackgroundColor}">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
@@ -32,14 +41,34 @@
                                             <ColumnDefinition Width="30*"/>
                                         </Grid.ColumnDefinitions>
                                         <Label Grid.Column="0" Text="{Binding Beverage.Name}" TextColor="Black" FontSize="13" HorizontalOptions="Start"/>
-                                        <Entry Grid.Column="1" Text="{Binding Beverage.Quantity}" TextColor="Black" FontSize="13" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+                                        <CustomRenderers:MyEntry Grid.Column="1" Text="{Binding Beverage.Quantity}" TextColor="Black" FontSize="13" Keyboard="Numeric" 
+                                                                 HorizontalTextAlignment="End" IsEnabled="{Binding Tapped}" NeedToFocus="{Binding Tapped}"/>
                                     </Grid>
                                 </StackLayout>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout Grid.Row="2" x:Name="stkAccessoryKeyboard" IsVisible="True" Orientation="Horizontal" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="btnPrev" Text="Prev" BackgroundColor="Transparent" Margin="10,0,0,0" FontSize="12" />
+                    <Button Grid.Column="1" x:Name="btnNext" Text="Next" BackgroundColor="Transparent" Margin="0,0,0,0" FontSize="12" />
+                    <Label Grid.Column="3" x:Name="lblPlus" Text="+" HorizontalOptions="EndAndExpand" VerticalOptions="Center" FontSize="30">
+
+                    </Label>
+                    <Label Grid.Column="4" x:Name="lblDone" Text="Done" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="0,0,10,0" FontSize="16">
+
+                    </Label>
+                </Grid>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -42,6 +42,11 @@ namespace MyListViewApp.Views
         {
             if (beverageListViewItemSelected != null)
             {
+                if (beverageListViewItemSelected == newBeverageListViewItem)
+                {
+                    beverageListViewItemSelected.UpdateView();
+                    return;
+                }
                 beverageListViewItemSelected.Tapped = !beverageListViewItemSelected.Tapped;
                 beverageListViewItemSelected.UpdateView();
             }

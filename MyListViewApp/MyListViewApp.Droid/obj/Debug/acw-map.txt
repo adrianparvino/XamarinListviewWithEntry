@@ -2,6 +2,10 @@ MyListViewApp.Droid.MainActivity, MyListViewApp.Droid;md5ca95586531522fb5ece575a
 MyListViewApp.Droid.MainActivity, MyListViewApp.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ca95586531522fb5ece575a58f5925ca.MainActivity
 MyListViewApp.Droid.MainActivity;md5ca95586531522fb5ece575a58f5925ca.MainActivity
 mylistviewapp.droid.MainActivity;md5ca95586531522fb5ece575a58f5925ca.MainActivity
+MyListViewApp.Droid.MyEntryRenderer, MyListViewApp.Droid;md5ca95586531522fb5ece575a58f5925ca.MyEntryRenderer
+MyListViewApp.Droid.MyEntryRenderer, MyListViewApp.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ca95586531522fb5ece575a58f5925ca.MyEntryRenderer
+MyListViewApp.Droid.MyEntryRenderer;md5ca95586531522fb5ece575a58f5925ca.MyEntryRenderer
+mylistviewapp.droid.MyEntryRenderer;md5ca95586531522fb5ece575a58f5925ca.MyEntryRenderer
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor

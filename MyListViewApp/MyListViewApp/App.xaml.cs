@@ -23,7 +23,9 @@ namespace MyListViewApp
             Models.Store store = new Models.Store("JOE'S Bar");
             beverageList.Add(new Models.Beverage("Budweiser bottle", 20, store));
             beverageList.Add(new Models.Beverage("Heineken bottle", 50, store));
+            beverageList.Add(new Models.Beverage("Heineken can", 50, store));
             beverageList.Add(new Models.Beverage("Guiness can", 0, store));
+            beverageList.Add(new Models.Beverage("Budweiser can", 180, store));
 
             store = new Models.Store("Good Cafe");
             beverageList.Add(new Models.Beverage("Milk box", 0, store));
@@ -33,6 +35,8 @@ namespace MyListViewApp
             beverageList.Add(new Models.Beverage("Sprite can", 0, store));
             beverageList.Add(new Models.Beverage("Nestea bottle", 25, store));
             beverageList.Add(new Models.Beverage("Coke bottle", 80, store));
+            beverageList.Add(new Models.Beverage("Coke cab", 120, store));
+            beverageList.Add(new Models.Beverage("Nestea bottle", 80, store));
 
             return beverageList;
         }

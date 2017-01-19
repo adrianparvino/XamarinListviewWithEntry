@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomRenderers\MyEntry.cs" />
     <Compile Include="Models\Beverage.cs" />
     <Compile Include="Models\BeverageCollection.cs" />
     <Compile Include="Models\BeverageListViewItem.cs" />

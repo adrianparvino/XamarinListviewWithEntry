@@ -23,10 +23,30 @@ namespace MyListViewApp.Views {
         private global::Xamarin.Forms.ListView beverageList;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.StackLayout stkAccessoryKeyboard;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnPrev;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnNext;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label lblPlus;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label lblDone;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainPage));
             toolbarEdit = this.FindByName<global::Xamarin.Forms.ToolbarItem>("toolbarEdit");
             beverageList = this.FindByName<global::Xamarin.Forms.ListView>("beverageList");
+            stkAccessoryKeyboard = this.FindByName<global::Xamarin.Forms.StackLayout>("stkAccessoryKeyboard");
+            btnPrev = this.FindByName<global::Xamarin.Forms.Button>("btnPrev");
+            btnNext = this.FindByName<global::Xamarin.Forms.Button>("btnNext");
+            lblPlus = this.FindByName<global::Xamarin.Forms.Label>("lblPlus");
+            lblDone = this.FindByName<global::Xamarin.Forms.Label>("lblDone");
         }
     }
 }
